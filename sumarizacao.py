@@ -25,7 +25,7 @@ Proteger a Amazônia não é apenas uma responsabilidade dos países que a abrig
 # Contagem de palavras
 word_count = len(text.split())
 if word_count < 300 or word_count > 500:
-    print(f"❌ O texto deve conter entre 300 e 500 palavras. Atualmente contém {word_count}.")
+    print(f"O texto deve conter entre 300 e 500 palavras. Atualmente contém {word_count}.")
     exit()
 
 # Calcula limite máximo de palavras no resumo (50%)
@@ -52,9 +52,9 @@ summary = tokenizer.decode(summary_ids[0], skip_special_tokens=True)
 summary_word_count = len(summary.split())
 
 # Resultados
-print("\n📄 Texto original:")
+print("\nTexto original:")
 print(f"{word_count} palavras")
 
-print("\n📝 Resumo gerado:")
+print("\nResumo gerado:")
 print(summary)
-print(f"\n✅ Resumo contém {summary_word_count} palavras ({(summary_word_count/word_count)*100:.1f}% do original)")
+print(f"\nResumo contém {summary_word_count} palavras ({(summary_word_count/word_count)*100:.1f}% do original)")
